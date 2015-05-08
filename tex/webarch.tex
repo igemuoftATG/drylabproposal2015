@@ -1,0 +1,47 @@
+\begin{tikzpicture}[
+    squarednode/.style={rectangle, draw=black, very thick, minimum size=5mm, inner sep=10pt},
+    roundnode/.style={circle, draw=black, very thick, minimum size=7mm},
+]
+
+\node[squarednode] (biodatabases) {Bio Databases};
+
+\path (biodatabases) ++(270:150pt) node[squarednode] (MongoDB) {\begin{tabular}{c} 
+    Our Database \\
+    (\href{https://www.mongodb.org/}{MongoDB})
+\end{tabular}};
+
+\path (biodatabases) ++(130:100pt) node [roundnode] (KEGG) {\href{http://www.genome.jp/kegg/}{KEGG}};
+\path (biodatabases) ++(100:80pt) node [roundnode] (Ensembl) {\href{http://www.ensembl.org/index.html}{Ensembl}};
+\path (biodatabases) ++(70:90pt) node [roundnode] (BioCyc) {\href{http://biocyc.org/}{BioCyc}};
+\path (biodatabases) ++(40:100pt) node [roundnode] (MetaCyc) {\href{http://metacyc.org/}{MetaCyc}};
+
+\path (biodatabases) ++(290:90pt) node[] {\href{https://api.mongodb.org/python/current/}{PyMongo}};
+
+\path (MongoDB) ++(270:150pt) node [squarednode] (API) {\begin{tabular}{c}
+    RESTful API \\
+    (\href{https://nodejs.org/}{NodeJS} (\href{http://expressjs.com/}{ExpressJS}) )
+\end{tabular}};
+
+\path (API) ++(290:90pt) node[] (AngularJS) {\href{https://angularjs.org/}{AngularJS}};
+
+\path (MongoDB) ++(290:90pt) node[] (Mongoose) {\href{http://mongoosejs.com/}{Mongoose}};
+
+\path (API) ++(270:150pt) node [squarednode] (webapp) {\begin{tabular}{c}
+    Webapp \\ 
+\end{tabular}};
+
+\path (webapp) ++(230:80pt) node [roundnode] (D3) {\href{http://d3js.org/}{D3.js}};
+
+
+%\draw[->] (KEGG.south) .. controls +(down:7mm) and +(left:7mm) .. (biodatabases.west);
+\draw[-] (KEGG.south) -- (biodatabases.north);
+%\draw[->] (Ensembl.north) .. controls +(up:37mm) and +(left:55mm) .. (biodatabases.west);
+\draw[-] (Ensembl.south) -- (biodatabases.north);
+\draw[-] (BioCyc.south) -- (biodatabases.north);
+\draw[-] (MetaCyc.south) -- (biodatabases.north);
+\draw[->] (biodatabases.south) -- (MongoDB.north);
+\draw[<->] (MongoDB.south) -- (API.north); 
+\draw[<->] (API.south) -- (webapp);
+\draw[->] (D3.north) .. controls +(up:7mm) and +(left:7mm) .. (webapp.west);
+
+\end{tikzpicture}
