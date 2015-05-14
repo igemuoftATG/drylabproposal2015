@@ -1,0 +1,26 @@
+-understanding a methanogenic benzene-degreding culture using metabolic models
+ created from metagenomic sequences
+-pathway commons
+-community metabolic models
+-community flux balance analysis for microbila consortia at balanced growth
+-model SEED
+-gap filling reactions
+-high-throughput generation, optimization, and analysis of genome-scale 
+ metabolic networks
+
+Look into BioPax for construction of biological database
+Contact Meric Gertler for community outreach.
+IEP Python IDE for Mac
+Christopher Voigt Programming cells towards an automated genetic compiler  
+Careful with T7 phage because this is very efficient and when used, it can stop
+all other functions in the cell. 
+Recombinant expression of membrane proteins tend to be toxic. There is a chance
+of change in the membrane potential. Use evolutionary engineering to optimize
+using toluene as a carbon source. Keep todX as an "add on". Find a way to reach
+our goal through different ways and adapt as we go along. There could be many
+things that go wrong. The RNA could not be transcribe, the AA is not translated.
+You would assay them with PCR to check their quantity for RNA, for protein use
+tags to do a western blot to check for their expression. 
+It would be really good if we could show that todE and todF works in degrading
+3-methylcatechol. Then we can add in the green boxed pathway that is well
+studied in literature.
